@@ -137,7 +137,13 @@ li {
 .search,
 .cargo,
 .ship,
-.plane { 
+.plane,
+.storage-icon,
+.truck-icon,
+.warehouse-icon,
+.earth-icon,
+.car-icon,
+.clock-icon { 
   display: inline-block;
   text-indent: -9999px;
 }
@@ -323,8 +329,8 @@ li {
 .cargo::after,
 .ship::after,
 .plane::after {
-  font-family: "fontAwesome";
   color: #32AF96;
+  font-family: "fontAwesome";
   font-size: 90px;
   float: right;
   text-indent: 0;
@@ -335,10 +341,73 @@ li {
 .plane::after {content: "\e22d";}
 /* banner section styling endss here */
 
+/* service section styling starts here */
 
+.services {margin-top: 100px;}
 
+.heading-txt {
+  font-size: 28px;
+  font-weight: 600;
+}
 
+.services .wrapper .heading-txt { text-align: center; }
+/* service section styling ends here */
 
+.truck-icon::after {content: "\f0d1";}
+.storage-icon::after {content: "\f1c0";}
+.clock-icon::after {content: "\f017";}
+.car-icon::after {content: "\f1b9";}
+.warehouse-icon::after {content: "\f494";}
+.earth-icon::after {content: "\f57e";}
+
+.truck-icon::after,
+.storage-icon::after,
+.clock-icon::after,
+.car-icon::after,
+.warehouse-icon::after,
+.earth-icon::after {
+  height: 100%;
+  width: 100%;
+  padding-top: 10px;
+  font-family: "fontAwesome";
+  float: right;
+  text-indent: 0;
+}
+
+.services-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.service-item {
+  padding: 20px;
+  margin: 0 2% 20px 0;
+  border: 1px solid #F4F4F4;
+  display: flex;
+  flex-basis: 30%;
+}
+
+.service-item:nth-child(3n) { margin: 0 0 20px 0;}
+
+.service-item-txt {
+  color: #333;
+  font-weight: 600;
+}
+
+.service-item-subtxt { 
+  color: #B0ACB6;
+  font-size: 14px;
+}
+
+.service-item span {
+  margin-right: 13%;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  flex-basis: 45%;
+  background-color: #EEE;
+  text-align: center;
+}
 
 
 /*=================================
@@ -402,6 +471,4 @@ li {
     background-color: #CCC;
     transition: .4s ease-in;
   }
-
-
 }  
