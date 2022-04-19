@@ -195,7 +195,42 @@ li {
   font-size: 16px;
 }
 
-.dropdown { display: none; }
+.dropdown { 
+  min-width: 145px;
+  display: none; 
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background-color: #f1f1f1;
+  color: #000;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown li a {
+  padding: 18px 52px;
+  display: block;
+  color: #000;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.dropdown li a:hover {
+  color: #f1f1f1;
+  background-color: #32AF96;
+  transition: .4s ease-in;
+}
+
+.home-menu,
+.page-menu,
+.gallery-menu,
+.service-menu,
+.about-menu,
+.blog-menu,
+.shop-mnu {
+  position: relative;
+}
 
 .bag::after { content: "\f290";}
 .search::after { content: "\f002";}
@@ -216,9 +251,6 @@ li {
   font-family: "fontAwesome";
 }
 
-.home:hover + .dropdown{
-    display: flex;
-}
 
 /*=================================
   Header styling ends here
@@ -257,6 +289,33 @@ li {
 /*media query for 995px starts here*/
 @media only screen and (max-width: 995px) {
 
+
+
+}  
+
+@media only screen and (min-width: 995px) {
+  .home-menu:hover > .dropdown,
+  .page-menu:hover > .dropdown,
+  .gallery-menu:hover > .dropdown,
+  .service-menu:hover > .dropdown,
+  .about-menu:hover > .dropdown,
+  .blog-menu:hover > .dropdown,
+  .shop-menu:hover > .dropdown {
+    display: flex;
+  }
+
+  .search:hover::after,
+  .bag:hover::after,
+  .nav-links li a:hover,
+  .nav-links li a:hover::after {
+    color: #32AF96;
+  }
+
+  .quote-btn:hover {
+    color: #32AF96;
+    background-color: #000;
+    transition: .4s ease-in;
+  }
 
 
 }  
