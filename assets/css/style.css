@@ -102,18 +102,33 @@ li {
 .bold { font-weight: bold; }
 .transition { transition: 1s all ease; }
 
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 /*for wrapper*/
 .wrapper {
   max-width: 1350px;
-  width: 86%; 
+  width: 87%; 
   margin: 0 auto;
 }
 /*=================================
   Header styling starts here
 =================================*/
+.header-primary {
+  display: flex;
+}
 
+.hamburger { display: none;}
 
-
+.bar { 
+  display: inline-block;
+  text-indent: -9999px;
+}
 
 
 
