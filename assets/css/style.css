@@ -134,7 +134,10 @@ li {
 .phone-icon,
 .home-icon,
 .time-icon,
-.search { 
+.search,
+.cargo,
+.ship,
+.plane { 
   display: inline-block;
   text-indent: -9999px;
 }
@@ -259,7 +262,78 @@ li {
 /*=================================
   main styling starts here
 =================================*/
+/* banner section styling starts here */
 
+.banner {
+  padding-bottom: 95px;
+  background: url('/assets/Images/slider.jpg');
+  color: #FFF;
+  text-align: center;
+}
+
+.slogan {
+  padding-top: 17px;
+  font-size: 104px;
+  text-align: center;
+}
+
+.subtext { font-size: 15px; }
+.subtext:last-of-type { padding: 20px 0 13px; }
+
+.read-more-btn,
+.contact-btn {
+  padding: 15px 25px;
+  border-radius: 8px;
+  background-color: #32AF96;
+  color: #FFF;
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.contact-btn {
+  color: #CCC;
+  background-color: #FFF;
+  margin-left: 9px;
+}
+
+.transport {
+  padding-top: 30px;
+  display: flex;
+}
+
+.transport-item { background-color: #FFF; }
+
+.transport-txt {
+  padding-top: 15px;
+  color: #7F7F7F
+}
+
+.transport-item {
+  margin-right: 3%;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-basis: 23%;
+}
+
+.transport-item > span:first-of-type { display: block;}
+.transport-item:nth-child(4n) { margin-right: 0;}
+.cargo::after,
+.ship::after,
+.plane::after {
+  font-family: "fontAwesome";
+  color: #32AF96;
+  font-size: 90px;
+  float: right;
+  text-indent: 0;
+}
+
+.cargo::after {content: "\f0d1";}
+.ship::after {content: "\e4ea";}
+.plane::after {content: "\e22d";}
+/* banner section styling endss here */
 
 
 
@@ -314,6 +388,18 @@ li {
   .quote-btn:hover {
     color: #32AF96;
     background-color: #000;
+    transition: .4s ease-in;
+  }
+
+  .read-more-btn:hover {
+    color: #32AF96;
+    background-color: #FFF;
+    transition: .4s ease-in;
+  }
+
+  .contact-btn:hover {
+    color: #FFF;
+    background-color: #CCC;
     transition: .4s ease-in;
   }
 
