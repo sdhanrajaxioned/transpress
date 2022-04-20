@@ -331,6 +331,7 @@ li {
 
 .transport-item > span:first-of-type { display: block;}
 .transport-item:nth-child(4n) { margin-right: 0;}
+
 .cargo::after,
 .ship::after,
 .plane::after {
@@ -371,9 +372,7 @@ li {
 .car-icon::after,
 .warehouse-icon::after,
 .earth-icon::after {
-  height: 100%;
-  width: 100%;
-  padding-top: 10px;
+  padding: 10px;
   font-family: "fontAwesome";
   float: right;
   text-indent: 0;
@@ -401,17 +400,16 @@ li {
 }
 
 .service-item-subtxt { 
+  padding-top: 18px;
   color: #B0ACB6;
   font-size: 14px;
 }
 
 .service-item span {
-  margin-right: 13%;
-  height: 40px;
-  width: 40px;
-  border-radius: 50%;
-  flex-basis: 45%;
+  height: fit-content;
   background-color: #EEE;
+  border-radius: 50%;
+  margin-right: 13%;
   text-align: center;
 }
 
@@ -428,8 +426,9 @@ li {
 }
 
 .about-subtxt {
-  color: #989090;
+  color: #BBBBBB;
   font-size: 15px;
+  line-height: 24px;
 }
 
 .about-subtxt:last-of-type{ padding: 45px 0 23px;}
@@ -437,6 +436,7 @@ li {
 .about-us {
   display: flex;
   flex-wrap: wrap;
+  align-items: end;
 }
 
 .about-us-content {
@@ -543,34 +543,132 @@ li {
 /* counter styling ends here */
 
 /* feature section styling starts here */
+.feature { margin-top: 98px;}
+
 .feature .wrapper {
   display: flex;
 }
 
 .feature .wrapper > * { flex: 1;}
 .panel.active { display: block;}
-.special-accordian { max-width: 525px;}
+
+.special-accordian { 
+  margin-top: 30px;
+  max-width: 525px;
+}
 
 .panel {
   padding: 23px 20px;
-  border: 1px solid #DEDEDE;
+  border-top: 1px solid #DEDEDE;
+  display: none;
+  line-height: 24px;
 }
 
+  
+.panel p { 
+  color: #BBBBBB; 
+  font-size: 14px;
+}
+
+.read-more::after,
 .arrow::after {
   content: "\f061";
+  padding-left: 20px;
+  color: #BBB;
   font-family: "fontAwesome";
+  font-weight: 900;
   float: right;
   text-indent: 0;
 }
 
+.accordian-item .feature-txt { 
+  padding: 20px;
+  display: inline-block; 
+}
+
+.accordian-item {
+  /* padding: 22px 25px; */
+  display: block;
+  border: 1px solid #EEE;
+}
 .feature-txt {
   color: #33333D;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 600;
 }
 
-  
-  .feature-txt a { color: #33333D; }
+.feature-txt a { color: #33333D; }
+
+.cruise::before {content: "\e4ea";}
+.flight::before {content: "\e22d";}
+.trucks::before {content: "\f0d1";}
+.globe::before {content: "\f57e";}
+
+.cruise::before,
+.flight::before,
+.trucks::before,
+.globe::before {
+  padding: 0 14px 0 14px;
+  color: #BBBBBB;
+  font-family: "fontAwesome";
+  font-size: 24px;
+  float: left;
+  text-indent: 0;
+}
+
+.news { margin-bottom: 90px;}
+
+.news-post {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.post { flex-basis: 48%;}
+.post:nth-child(odd) { margin-right: 4%;}
+
+.post-content {
+  padding: 20px;
+  border: 1px solid #EEE;
+}
+
+.date {
+  display: inline-block;
+  padding: 20px 0;
+  color: #A6A4B4;
+  font-size: 14px;
+}
+
+.date::before {
+  content: "\f017";
+  padding-right: 10px;
+  color: #32AF96;
+  font-family: "fontAwesome";
+  font-size: 14px;
+}
+
+.post-txt {
+  color: #A6A4B4;
+  font-size: 15px;
+  line-height: 25px;
+}
+
+.read-more {
+  padding-top: 20px;
+  color: #888888;
+  font-weight: 600;
+}
+
+.read-more:hover::after,
+.read-more:hover { 
+  color: #32AF96; 
+}
+
+.read-more::after {
+  padding-left: 10px;
+  color: #888888;
+}
+
 
 /* feature section styling ends here */
 /*=================================
