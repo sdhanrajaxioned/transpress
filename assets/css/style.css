@@ -316,9 +316,8 @@ li {
 .transport {
   padding-top: 30px;
   display: flex;
+  flex-wrap: wrap;
 }
-
-.transport-item { background-color: #FFF; }
 
 .transport-txt {
   padding-top: 15px;
@@ -326,12 +325,13 @@ li {
 }
 
 .transport-item {
-  margin-right: 3%;
+  margin: 0 3% 10px 0;
   padding: 25px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  flex-basis: 23%;
+  flex-basis: 22.7%;
+  background-color: #FFF; 
 }
 
 .transport-item > span:first-of-type { display: block;}
@@ -361,7 +361,10 @@ li {
   font-weight: 600;
 }
 
-.services .wrapper .heading-txt { text-align: center; }
+.services .wrapper .heading-txt { 
+  padding-bottom: 20px;
+  text-align: center; 
+}
 /* service section styling ends here */
 
 .truck-icon::after {content: "\f0d1";}
@@ -450,7 +453,29 @@ li {
   flex-basis: 40%;
 }
 
-.modal { flex-basis: 52%; }
+.modal { 
+  flex-basis: 52%;
+  position: relative;
+  background-color: #000;
+}
+
+.modal img { opacity: .5;}
+
+.modal::before {
+  content: "\f04b";
+  padding: 20px 30px;
+  border-radius: 50px;
+  border: 3px solid #EEE;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: #FFF;
+  font-family: "fontAwesome";
+  font-size: 60px;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  z-index: 99;
+}
 
 .video-container {
   width: 100%;
@@ -630,7 +655,7 @@ li {
 }
 
 .post { flex-basis: 48%;}
-.post:nth-child(odd) { margin-right: 4%;}
+.post:nth-child(odd) { margin: 0 4% 10px 0; }
 
 .post-content {
   padding: 20px;
@@ -688,6 +713,8 @@ li {
   }
 
   .bold-info { font-size: 15px; }
+
+  .slogan { font-size: 80px; }
 }  
 
 @media only screen and (max-width: 1145px ){
@@ -701,13 +728,167 @@ li {
     flex-basis: 25%;
   }
 
-  .company-info { flex-grow: 1; }
+  .company-info { 
+    flex-grow: 1; 
+    justify-content: space-between;
+  }
+
+  .cargo::after, 
+  .ship::after, 
+  .plane::after {
+    font-size: 65px;
+  }
+
+  .transport-txt { font-size: 14px;}
+  .nav-links li a { padding: 20px 10px; }
 }
 
-@media only screen and(max-width: 859px){
-  
+
+
+@media only screen and (max-width: 995px) {
+  .nav-links li a { font-size: 14px; }
+  .slogan { font-size: 60px; }
+  .transport-item:nth-child(even) { margin-right: 0;}
+
+  .modal {padding: 15px 5%;}
+
+  .cargo::after, 
+  .ship::after, 
+  .plane::after {
+    font-size: 50px;
+  }
+
+  .transport-item { 
+    padding: 20px; 
+    flex-basis: 48.5%;
+  } 
+
+  .about-us {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+
+  .feature .wrapper {
+    flex-direction:  column;
+  }
+
 }
 
+@media only screen and (max-width: 859px){
+  .nav-links li a { font-size: 12px; }
+  .quote-btn { font-size: 12px; }
+  .bold-info { font-size: 12px; }
+
+  .phone-icon::after, 
+  .home-icon::after, 
+  .time-icon::after {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  header {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .header-primary .wrapper {
+    padding: 15px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .company-info {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .company-info > * { padding-top: 10px;}
+  .nav-links { display: none;}
+  .slogan { font-size: 40px; }
+  .hamburger { display: block; }
+
+  .nav-links {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 26px;
+    left: 100%;
+    background-color: #101010;
+    z-index: 99;
+  }
+
+  .nav-links.is-active { 
+    display: flex;
+    left: 0; 
+  }
+
+  .nav-links li a {
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    color: #32AF96;
+  }
+
+  .bar {
+    width: 15px;
+    height: 2px;
+    margin: 3px auto;
+    display: block;
+    background-color: #FFF;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .hamburger.active .bar:nth-child(2) { opacity: 0;}
+  .hamburger.active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg);}
+  .hamburger.active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg);}
+
+  .hide-scroll {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .subtext { font-size: 12px;}
+  .services-flex { flex-direction: column;}
+
+  .stats-counter {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .stats-item { margin: 0;}
+  .news-post {flex-direction: column;}
+  .heading-txt {font-size: 24px;}
+  .accordian-item {padding: 5px;}
+  .accordian-item .feature-txt { padding: 12px 0; }
+  .special-accordian {margin-bottom: 30px;}
+  .post:nth-child(odd) { margin: 0 0 10px 0; }
+}
+
+@media only screen and (max-width: 480px) {
+  .cruise::before, .flight::before, .trucks::before, .globe::before {
+    padding: 0 5px 0 5px;
+    font-size: 18px;
+  }
+
+  .slogan { font-size: 27px; }
+  .transport { flex-direction: column;}
+  .transport-item { margin-right: 0;}
+  .accordian-item .feature-txt { padding: 10px 0; }
+  .feature-txt a { font-size: 14px;}
+  .arrow::after { padding-left: 5px;}
+  .heading-txt { font-size: 20px;}
+}
 
 @media only screen and (min-width: 995px) {
   .home-menu:hover > .dropdown,
