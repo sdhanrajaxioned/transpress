@@ -65,7 +65,9 @@ $(document).ready(function () {
   })
 
   // Accordian Functionality
+  // displays first accordian item panel
   $('.accordian-item:first-child').addClass('active').children('.panel').slideDown();
+  // toggles active class and displays specific panel
   $('.accordian-item').click(function() {
     $('div.panel').slideUp();
     $(this).toggleClass('active');
