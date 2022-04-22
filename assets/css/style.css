@@ -238,12 +238,6 @@ li {
   white-space: nowrap;
 }
 
-.dropdown li a:hover {
-  background-color: #32AF96;
-  color: #f1f1f1;
-  transition: .4s ease-in;
-}
-
 .home-menu,
 .page-menu,
 .gallery-menu,
@@ -400,7 +394,6 @@ li {
   border-bottom: 3px solid #32AF96;
   display: block;
 }
-
 /* service section styling ends here */
 
 .truck-icon::after {content: "\f0d1";}
@@ -467,7 +460,6 @@ li {
   border-bottom: 3px solid #32AF96;
   display: block;
 }
-
 
 .about-subtxt {
   color: #BBBBBB;
@@ -861,6 +853,13 @@ li {
     cursor: pointer;
   }
 
+  .dropdown { 
+    display: none; 
+    position: unset;
+  }
+  
+  .dropdown li { display: block;}
+
   header {
     display: flex;
     flex-direction: column-reverse;
@@ -914,8 +913,8 @@ li {
     width: 100%;
     margin: 6px;
     display: block;
-    color: #32AF96;
     font-size: 14px;
+    text-align: center;
   }
 
   .bar {
@@ -994,6 +993,12 @@ li {
   .blog-menu:hover > .dropdown,
   .shop-menu:hover > .dropdown {
     display: flex;
+  }
+
+  .dropdown li a:hover {
+    background-color: #32AF96;
+    color: #f1f1f1;
+    transition: .4s ease-in;
   }
 
   .search:hover::after,
