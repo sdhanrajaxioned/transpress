@@ -11,25 +11,7 @@ $(document).ready(function () {
     $('body').toggleClass('hide-scroll');
 
     // for displaying dropdown menus
-    $('.home-menu').click(function() {
-      $(this).children('.dropdown').slideToggle();
-    })
-    $('.page-menu').click(function() {
-      $(this).children('.dropdown').slideToggle();
-    })
-    $('.gallery-menu').click(function() {
-      $(this).children('.dropdown').slideToggle();
-    })
-    $('.service-menu').click(function() {
-      $(this).children('.dropdown').slideToggle();
-    })
-    $('.about-menu').click(function() {
-      $(this).children('.dropdown').slideToggle();
-    })
-    $('.blog-menu').click(function() {
-      $(this).children('.dropdown').slideToggle();
-    })
-    $('.shop-menu').click(function() {
+    $('.home-menu, .page-menu, .gallery-menu, .service-menu, .about-menu, .blog-menu, .shop-menu').click(function() {
       $(this).children('.dropdown').slideToggle();
     })
   });
