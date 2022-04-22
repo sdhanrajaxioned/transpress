@@ -9,6 +9,29 @@ $(document).ready(function () {
     hamburger.toggleClass('active');
     navLinks.toggleClass('is-active');
     $('body').toggleClass('hide-scroll');
+
+    // for displaying dropdown menus
+    $('.home-menu').click(function() {
+      $(this).children('.dropdown').slideToggle();
+    })
+    $('.page-menu').click(function() {
+      $(this).children('.dropdown').slideToggle();
+    })
+    $('.gallery-menu').click(function() {
+      $(this).children('.dropdown').slideToggle();
+    })
+    $('.service-menu').click(function() {
+      $(this).children('.dropdown').slideToggle();
+    })
+    $('.about-menu').click(function() {
+      $(this).children('.dropdown').slideToggle();
+    })
+    $('.blog-menu').click(function() {
+      $(this).children('.dropdown').slideToggle();
+    })
+    $('.shop-menu').click(function() {
+      $(this).children('.dropdown').slideToggle();
+    })
   });
 
   // plays video when modal button is clicked
@@ -76,5 +99,4 @@ $(document).ready(function () {
       $(this).find('div.panel').slideUp();
     }
   })
-
 });
