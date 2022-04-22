@@ -893,13 +893,13 @@ li {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
     align-items: center;
     background-color: #101010;
     position: fixed;
     z-index: 99;
-    top: 26px;
+    top: 46px;
     left: 100%;
+    transition: .4s linear;
   }
 
   .nav-links.is-active { 
@@ -910,8 +910,10 @@ li {
   .nav-links li a {
     max-width: 200px;
     width: 100%;
+    margin: 6px;
     display: block;
     color: #32AF96;
+    font-size: 14px;
   }
 
   .bar {
