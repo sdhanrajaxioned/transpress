@@ -894,6 +894,7 @@ li {
     width: 100%;
     max-height: calc(100% - 50px);
     min-height: 100vh;
+    padding: 20px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
