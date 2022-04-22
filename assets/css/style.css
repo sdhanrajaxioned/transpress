@@ -911,11 +911,18 @@ li {
   .nav-links li a {
     max-width: 200px;
     width: 100%;
-    margin: 6px;
+    margin: 6px 0;
     display: block;
     font-size: 14px;
     text-align: center;
   }
+
+  .dropdown li a { 
+    margin: 0;
+    background-color: #32AF96;
+  }
+
+  .dropdown li { border-bottom: 1px solid #000;}
 
   .bar {
     width: 15px;
