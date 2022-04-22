@@ -753,6 +753,7 @@ li {
   .header-primary .wrapper h1 { 
     padding-bottom: 10px;
     flex-basis: 25%;
+    flex-grow: 1;
   }
 
   .company-info { 
