@@ -441,6 +441,7 @@ li {
   padding-top: 18px;
   color: #B0ACB6;
   font-size: 14px;
+  line-height: 18px;
 }
 
 .service-item span {
@@ -624,16 +625,15 @@ li {
   line-height: 24px;
 }
 
-  
 .panel p { 
   color: #BBBBBB; 
   font-size: 14px;
 }
 
 .arrow {
-  padding: 20px;
   flex-basis: 13%;
-  padding: 20px;
+  padding: 0;
+  background: #F9F9F9;
 }
 
 .read-more::after,
@@ -647,13 +647,13 @@ li {
   text-indent: 0;
 }
 
-/* .accordian-item .feature-txt { 
-  padding: 20px;
-  display: inline-block; 
-} */
+.accordian-title {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
 
 .accordian-item {
-  /* padding: 22px 25px; */
   display: block;
   border: 1px solid #EEE;
 }
@@ -726,11 +726,6 @@ li {
   padding-top: 20px;
   color: #888888;
   font-weight: 600;
-}
-
-.read-more:hover::after,
-.read-more:hover { 
-  color: #32AF96; 
 }
 
 .read-more::after {
@@ -842,11 +837,11 @@ li {
 }
 
 @media only screen and (max-width: 768px) {
+  .header-secondary {padding: 10px 0;}
   .header-secondary .wrapper { width: 84%; }
   .services .wrapper .heading-txt::after { margin: 10px 0; }
   .company-info > * { padding-top: 10px;}
   .nav-links { display: none;}
-  .hamburger { display: block; }
   .hamburger.active .bar:nth-child(2) { opacity: 0;}
   .hamburger.active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg);}
   .hamburger.active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg);}
@@ -855,11 +850,15 @@ li {
   .services .wrapper .heading-txt { text-align: left;}
   .news-post {flex-direction: column;}
   .heading-txt {font-size: 24px;}
-  .accordian-item {padding: 5px;}
-  .accordian-item .feature-txt { padding: 12px 0; }
   .special-accordian {margin-bottom: 30px;}
   .post:nth-child(odd) { margin: 0 0 10px 0; }
   .quote-btn { padding: 15px 27px; }
+
+  .hamburger { 
+    display: block; 
+    cursor: pointer;
+  }
+
   header {
     display: flex;
     flex-direction: column-reverse;
@@ -941,9 +940,12 @@ li {
 }
 
 @media only screen and (max-width: 480px) {
-  .cruise::before, .flight::before, .trucks::before, .globe::before {
-    padding: 0 5px 0 5px;
-    font-size: 18px;
+  .cruise::before, 
+  .flight::before, 
+  .trucks::before, 
+  .globe::before {
+    font-size: 14px;
+    padding: 19px 10px;
   }
 
   .read-more-btn, .contact-btn {
@@ -957,11 +959,15 @@ li {
     letter-spacing: 5px; 
   }
 
+  .feature-txt a { 
+    padding: 20px 0;
+    font-size: 12px; 
+  }
+  
+  .arrow { flex-basis: 10%; } 
   .transport { flex-direction: column;}
   .transport-item { margin-right: 0;}
-  .accordian-item .feature-txt { padding: 10px 0; }
-  .feature-txt a { font-size: 14px;}
-  .arrow::after { padding-left: 5px;}
+  .arrow::after { padding: 19px 10px;}
   .heading-txt { font-size: 20px;}
   .contact-btn { margin-left: 0;}
 
@@ -1002,4 +1008,10 @@ li {
     background-color: #CCC;
     transition: .4s ease-in;
   }
+
+  .read-more:hover::after,
+  .read-more:hover { 
+  color: #32AF96; 
+}
+
 }  
