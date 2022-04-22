@@ -200,7 +200,6 @@ li {
   font-size: 13px;
 }
 
-.header-secondary { background-color: #101010; }
 
 .navbar { 
   display: flex; 
@@ -214,6 +213,10 @@ li {
   font-size: 16px;
 }
 
+.header-secondary { background-color: #101010; }
+.nav-links li a.active { color: #32AF96; }
+.nav-links li a.active + .caret::after {color: #32AF96;}
+
 .dropdown { 
   min-width: 145px;
   display: none; 
@@ -221,10 +224,10 @@ li {
   justify-content: center;
   align-items: center;
   position: absolute;
+  z-index: 1;
   background-color: #f1f1f1;
   color: #000;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-  z-index: 1;
 }
 
 .dropdown li a {
@@ -236,8 +239,8 @@ li {
 }
 
 .dropdown li a:hover {
-  color: #f1f1f1;
   background-color: #32AF96;
+  color: #f1f1f1;
   transition: .4s ease-in;
 }
 
@@ -263,6 +266,7 @@ li {
   text-indent: 0;
 }
 
+.active-caret::after,
 .caret::after {
   content: "\f0d7";
   padding-left: 8px;
@@ -270,7 +274,9 @@ li {
   font-family: "fontAwesome";
 }
 
+.active-caret::after { color: #32AF96;}
 
+/* .caret::after:first-of-type { color: #32AF96;} */
 /*=================================
   Header styling ends here
 =================================*/  
@@ -301,16 +307,16 @@ li {
 }
 
 .slogan {
-  position: relative;
   padding-top: 17px;
+  position: relative;
   font-size: 104px;
   font-weight: 600;
   text-align: center;
 }
 
 .subtext { 
-  font-size: 15px; 
   position: relative;
+  font-size: 15px; 
 }
 
 .subtext:last-of-type { padding: 20px 0 13px; }
@@ -328,16 +334,16 @@ li {
 }
 
 .contact-btn {
-  color: #CCC;
-  background-color: #FFF;
   margin-left: 9px;
+  background-color: #FFF;
+  color: #CCC;
 }
 
 .transport {
-  position: relative;
   padding-top: 30px;
   display: flex;
   flex-wrap: wrap;
+  position: relative;
 }
 
 .transport-txt {
@@ -346,8 +352,8 @@ li {
 }
 
 .transport-item {
-  margin: 0 3% 10px 0;
   padding: 25px;
+  margin: 0 3% 10px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -446,9 +452,9 @@ li {
 
 .service-item span {
   height: fit-content;
-  background-color: #EEE;
-  border-radius: 50%;
   margin-right: 13%;
+  border-radius: 50%;
+  background-color: #EEE;
   text-align: center;
 }
 
@@ -511,8 +517,8 @@ li {
   width: 100%;
   height: 100%;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   position: fixed;
   z-index: 99;
   top: 50%;
@@ -554,8 +560,8 @@ li {
 
 /* counter styling starts here */
 .counter-container {
-  background-color: #333;
   padding-top: 70px;
+  background-color: #333;
 }
 
 .cube-icon::after {content: "\f1b3";}
@@ -605,18 +611,11 @@ li {
 
 /* feature section styling starts here */
 .feature { margin-top: 98px;}
-
-.feature .wrapper {
-  display: flex;
-}
-
+.feature .wrapper { display: flex;}
 .feature .wrapper > * { flex: 1;}
 .panel.active { display: block;}
-
-.special-accordian { 
-  margin-top: 30px;
-  max-width: 525px;
-}
+.feature .wrapper > *:nth-child(odd) { margin-right: 3.7%; }
+.special-accordian { margin-top: 30px; }
 
 .panel {
   padding: 23px 20px;
@@ -631,8 +630,8 @@ li {
 }
 
 .arrow {
+  padding: 20px 5% 20px 0;
   flex-basis: 13%;
-  padding: 0;
   background: #F9F9F9;
 }
 
@@ -657,6 +656,7 @@ li {
   display: block;
   border: 1px solid #EEE;
 }
+
 .feature-txt {
   color: #33333D;
   font-size: 16px;
@@ -686,6 +686,8 @@ li {
 }
 
 .news { margin-bottom: 90px;}
+.post { flex-basis: 48%;}
+.post:nth-child(odd) { margin: 0 4% 10px 0; }
 
 .news-post {
   margin-top: 30px;
@@ -693,17 +695,14 @@ li {
   flex-wrap: wrap;
 }
 
-.post { flex-basis: 48%;}
-.post:nth-child(odd) { margin: 0 4% 10px 0; }
-
 .post-content {
   padding: 20px;
   border: 1px solid #EEE;
 }
 
 .date {
-  display: inline-block;
   padding: 20px 0;
+  display: inline-block;
   color: #A6A4B4;
   font-size: 14px;
 }
@@ -732,8 +731,6 @@ li {
   padding-left: 10px;
   color: #888888;
 }
-
-
 /* feature section styling ends here */
 /*=================================
   main styling ends here
@@ -742,15 +739,19 @@ li {
 /*media query starts*/
 /*media query for 1226px starts here*/
 @media only screen and (max-width: 1226px) {
-  .phone-icon::after, .home-icon::after, .time-icon::after {
+  .phone-icon::after, 
+  .home-icon::after, 
+  .time-icon::after {
     font-size: 24px;
   }
 
   .bold-info { font-size: 15px; }
-
   .slogan { font-size: 80px; }
 }  
+/*media query for 1226px starts here*/
 
+
+/*media query for 1145px starts here*/
 @media only screen and (max-width: 1145px ){
   .header-primary .wrapper {
     padding: 30px 0;
@@ -776,9 +777,9 @@ li {
   .transport-txt { font-size: 14px;}
   .nav-links li a { padding: 20px 10px; }
 }
+/*media query for 1145px ends here*/
 
-
-
+/*media query for 995px starts here*/
 @media only screen and (max-width: 995px) {
   .nav-links li a { font-size: 14px; }
   .transport-item:nth-child(even) { margin-right: 0;}
@@ -815,19 +816,18 @@ li {
     flex-direction: column;
     align-items: center;
   }
-
-
 }
+/*media query for 995px ends here*/
 
+/*media query for 878px starts here*/
 @media only screen and (max-width: 876px){
   .nav-links li a { font-size: 11px; }
+  .bold-info { font-size: 12px; }
 
   .quote-btn { 
     padding: 12px 20px;
     font-size: 12px; 
   }
-
-  .bold-info { font-size: 12px; }
 
   .phone-icon::after, 
   .home-icon::after, 
@@ -835,7 +835,9 @@ li {
     font-size: 20px;
   }
 }
+/*media query for 878px ends here*/
 
+/*media query for 768px starts here*/
 @media only screen and (max-width: 768px) {
   .header-secondary {padding: 10px 0;}
   .header-secondary .wrapper { width: 84%; }
@@ -867,8 +869,8 @@ li {
   .header-primary .wrapper {
     padding: 15px 0;
     display: flex;
-    align-items: center;
     flex-direction: column;
+    align-items: center;
   }
 
   .company-info {
@@ -894,11 +896,11 @@ li {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #101010;
     position: fixed;
     z-index: 99;
     top: 46px;
     left: 100%;
+    background-color: #101010;
     transition: .4s linear;
   }
 
@@ -941,14 +943,16 @@ li {
     line-height: 20px;
   }
 }
+/*media query for 768px ends here*/
 
+/*media query for 480px starts here*/
 @media only screen and (max-width: 480px) {
   .cruise::before, 
   .flight::before, 
   .trucks::before, 
   .globe::before {
-    font-size: 14px;
     padding: 19px 10px;
+    font-size: 14px;
   }
 
   .read-more-btn, .contact-btn {
@@ -967,15 +971,20 @@ li {
     font-size: 12px; 
   }
   
-  .arrow { flex-basis: 10%; } 
+  .arrow { 
+    padding: 0 5px;
+    flex-basis: 10%; 
+  } 
+
   .transport { flex-direction: column;}
   .transport-item { margin-right: 0;}
   .arrow::after { padding: 19px 10px;}
   .heading-txt { font-size: 20px;}
   .contact-btn { margin-left: 0;}
-
 }
+/*media query for 480px starts here*/
 
+/*media query for adding hover effects above 768px*/
 @media only screen and (min-width: 768px) {
   .home-menu:hover > .dropdown,
   .page-menu:hover > .dropdown,
@@ -1014,7 +1023,6 @@ li {
 
   .read-more:hover::after,
   .read-more:hover { 
-  color: #32AF96; 
-}
-
+    color: #32AF96; 
+  }
 }  
