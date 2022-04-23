@@ -10,10 +10,11 @@ $(document).ready(function () {
     navLinks.toggleClass('is-active');
     $('body').toggleClass('hide-scroll');
 
-    // for displaying dropdown menus
-    $('.home-menu, .page-menu, .gallery-menu, .service-menu, .about-menu, .blog-menu, .shop-menu').click(function() {
-      $(this).children('.dropdown').slideToggle();
-    })
+  });
+  
+  // for displaying dropdown menus
+  $('.home-menu, .page-menu, .gallery-menu, .service-menu, .about-menu, .blog-menu, .shop-menu').click(function() {
+    $(this).children('.dropdown').slideToggle();
   });
 
   // plays video when modal button is clicked
@@ -70,11 +71,9 @@ $(document).ready(function () {
   })
 
   // Accordian Functionality
-  // displays first accordian item panel
-  $('.accordian-item:first-child').addClass('active').children('.panel').slideDown();
   // toggles active class and displays specific panel
   $('.accordian-item').click(function() {
-    $('div.panel').slideUp();
+    $('div.panel').removeClass('active').slideUp();
     $(this).toggleClass('active');
     if($(this).hasClass('active')){
       $(this).siblings().removeClass('active');
