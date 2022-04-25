@@ -521,6 +521,8 @@ li {
   text-align: center;
 }
 
+.about-us { position: relative; }
+
 .about-us-content .heading-txt { text-align: left;}
 
 .about-us-content .heading-txt::after {
@@ -557,7 +559,7 @@ li {
   flex-basis: 40%;
 }
 
-.about-us-content .read-more-btn { margin-bottom: 105px;}
+.about-us-content .read-more-btn { margin-bottom: 105px; }
 
 .modal { 
   max-height: 515px;
