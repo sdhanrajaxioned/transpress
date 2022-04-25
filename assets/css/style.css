@@ -703,7 +703,7 @@ li {
 
 /* feature section styling starts here */
 .feature { margin-top: 98px;}
-.panel.active { display: block;}
+.accordian-item.active .panel { display: block;}
 .feature .wrapper > *:nth-child(odd) { margin-right: 3.7%; }
 .special-accordian { margin-top: 30px; }
 
