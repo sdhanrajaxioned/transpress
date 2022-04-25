@@ -73,13 +73,17 @@ $(document).ready(function () {
   // Accordian Functionality
   // toggles active class and displays specific panel
   $('.accordian-item').click(function() {
-    $('div.panel').removeClass('active').slideUp();
-    $(this).toggleClass('active');
+    console.log($(this));
+    $(this).siblings().removeClass('active');
+    $(this).siblings().find('div.panel').slideUp();
     if($(this).hasClass('active')){
-      $(this).siblings().removeClass('active');
-      $(this).find('div.panel').slideDown();
+      $(this).find('div.panel').slideUp(function() {
+        $(this).parents().removeClass('active');
+      })
     } else {
-      $(this).find('div.panel').slideUp();
+      $(this).find('div.panel').slideDown(function () {
+        $(this).parents().addClass('active');
+      });
     }
   })
 });
